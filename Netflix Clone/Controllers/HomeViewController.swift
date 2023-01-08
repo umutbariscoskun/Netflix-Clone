@@ -65,7 +65,7 @@ class HomeViewController: UIViewController {
 //            }
 //        }
         
-        APICaller.shared.getTopRatedMovies { results in
+        APICaller.shared.getTrendingTvs { results in
             switch results {
             case .success(let movies):
                 print(movies)
