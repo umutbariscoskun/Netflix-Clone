@@ -20,6 +20,7 @@
 		F0D75BA4296AE76E00009D26 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D75BA3296AE76E00009D26 /* HeroHeaderUIView.swift */; };
 		F0D75BA6296B0AD100009D26 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D75BA5296B0AD100009D26 /* APICaller.swift */; };
 		F0D75BA8296B0E3700009D26 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D75BA7296B0E3700009D26 /* Movie.swift */; };
+		F0D75BAA296B112B00009D26 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D75BA9296B112B00009D26 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F0D75BA3296AE76E00009D26 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		F0D75BA5296B0AD100009D26 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		F0D75BA7296B0E3700009D26 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F0D75BA9296B112B00009D26 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		F0D75B9F296AD89D00009D26 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F0D75BA9296B112B00009D26 /* Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				F0D75B99296AD2A300009D26 /* SearchViewController.swift in Sources */,
 				F0D75B84296AD05A00009D26 /* MainTabBarViewController.swift in Sources */,
 				F0D75BA2296AD8D900009D26 /* CollectionViewTableViewCell.swift in Sources */,
+				F0D75BAA296B112B00009D26 /* Extension.swift in Sources */,
 				F0D75BA6296B0AD100009D26 /* APICaller.swift in Sources */,
 				F0D75BA4296AE76E00009D26 /* HeroHeaderUIView.swift in Sources */,
 				F0D75B9B296AD2BD00009D26 /* DownloadsViewController.swift in Sources */,

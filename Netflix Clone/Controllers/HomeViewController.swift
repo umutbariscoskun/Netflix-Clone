@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let sectionTitles: [String] = ["TRENDING MOVIES","POPULAR" , "TRENDING TV","UPCOMING MOVIES","TOP RATED"]
+    let sectionTitles: [String] = ["TRENDING MOVIES","TRENDING TV","POPULAR" ,"UPCOMING MOVIES","TOP RATED"]
     
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -98,7 +98,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .label
-        header.textLabel?.text = header.textLabel?.text?.lowercased()
+        header.textLabel?.text = header.textLabel?.text?.capitalizedFirstLetter()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -120,14 +120,4 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension UIImage {
-    
-    func resizeImageTo(size: CGSize) -> UIImage? {
-        
-        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-        self.draw(in: CGRect(origin: CGPoint.zero, size: size))
-        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return resizedImage
-    }
-}
+
