@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
         
-        fetchData()
+        APICaller.shared.getMovie(with:"Harry Potter" )
     }
     
     private func configureNavBar(){
@@ -64,20 +64,7 @@ class HomeViewController: UIViewController {
         homeFeedTable.frame = view.bounds
     }
     
-    private func fetchData (){
-        getTrendingMovies()
-    }
-    
-    private func getTrendingMovies(){
-        APICaller.shared.getTrendingTvs { results in
-            switch results {
-            case .success(let movies):
-                print(movies)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
+
     
 
 
