@@ -38,7 +38,7 @@ class SearchViewController: UIViewController {
         
         navigationItem.searchController = searchController
         navigationController?.navigationBar.tintColor = .label
-        
+        navigationItem.hidesSearchBarWhenScrolling = false
         fetchDiscoverMovies()
         searchController.searchResultsUpdater = self
     }
