@@ -17,6 +17,10 @@ enum Sections: Int {
 
 class HomeViewController: UIViewController {
     
+    private var randomTrendingMovie: Movie?
+    
+    private var headerView: HeroHeaderUIView?
+    
     let sectionTitles: [String] = ["TRENDING MOVIES","TRENDING TV","POPULAR" ,"UPCOMING MOVIES","TOP RATED"]
     
     private let homeFeedTable: UITableView = {
@@ -35,10 +39,24 @@ class HomeViewController: UIViewController {
         
         configureNavBar()
         
-        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+         headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
-        
+        configureHeroHeaderView()
       
+    }
+    
+    private func configureHeroHeaderView() {
+        APICaller.shared.getTrendingMovies { [weak self] result in
+            switch result {
+            case .success(let movies):
+                let selectedMovie = movies.randomElement()
+                self?.randomTrendingMovie = selectedMovie
+                
+                self?.headerView?.configure(with: MovieViewModel(movieName: selectedMovie?.original_title ?? "" , posterUrl: selectedMovie?.poster_path ?? ""))
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func configureNavBar(){

@@ -75,6 +75,12 @@ class HeroHeaderUIView: UIView {
         gradientLayer.frame = bounds
         layer.addSublayer(gradientLayer)
     }
+    public func configure(with model: MovieViewModel) {
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(model.posterUrl)") else {return}
+       print(model)
+        heroImageView.sd_setImage(with: url)
+        
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
