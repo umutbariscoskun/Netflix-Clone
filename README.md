@@ -17,5 +17,5 @@
 | ![contextMenu](https://user-images.githubusercontent.com/45595606/212150806-90b8e4dd-32b8-47aa-96ab-5dd36de77258.png) | ![MoviePreviewVC](https://user-images.githubusercontent.com/45595606/212151194-772c88ae-cf74-46f4-a67f-5460ab840878.png) |
 | UpcomingVC | SearchVC |
 | ![UpcomingVC](https://user-images.githubusercontent.com/45595606/212151469-959c94e6-8f46-47dc-8a62-dc5efe27695b.png) | ![searchVC](https://user-images.githubusercontent.com/45595606/212151801-9c7df564-75c2-41ec-b918-89b195cfa517.png) |
-| UpcomingVC |  |
+| DownloadsVC |  |
 | ![DownloadsVC](https://user-images.githubusercontent.com/45595606/212152077-cbb91ba3-81ca-4bc8-83b9-acdc96132500.png) |  |
