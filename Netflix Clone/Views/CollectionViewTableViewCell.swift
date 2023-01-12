@@ -55,7 +55,15 @@ class CollectionViewTableViewCell: UITableViewCell {
     }
     
     private func downloadMovieAt(indexPath: IndexPath){
-        print("Downloading \(movies[indexPath.row].original_title)")
+        
+        PersistenceManager.shared.downloadMovie(model: movies[indexPath.row]) { result in
+            switch result {
+            case .success():
+                print("downloaded to database")
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 
 }
@@ -111,4 +119,6 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         return config
             
     }
+    
+    
 }
