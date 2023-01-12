@@ -8,6 +8,7 @@
 - Delegates and protocols pattern
 - Network manager with URLSession and Codable
 - Persistence manager for coreData
+- Image downloading with SDWebImage
 - Swift 5 result type and error handling
 
 | HomeVC | HomeVC |
